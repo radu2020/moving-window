@@ -14,7 +14,7 @@ import (
 )
 
 const dbPath string = "./simple.db"
-const windowDuration int = 10
+const windowDuration int = 60
 
 // Types
 
