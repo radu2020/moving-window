@@ -48,4 +48,30 @@ $ go run main.go
 
 ```
 
+## Running the tests
+
+```bash
+$ go test -v
+```
+
+## Test output
+```bash
+=== RUN   TestMainProgram
+=== RUN   TestMainProgram/should_return_correct_request_amount_for_each_request
+2023/08/28 14:11:33 0 entries were recovered from DB and loaded into memory.
+2023/08/28 14:11:33 Server available on http://localhost:3000/count
+=== RUN   TestMainProgram/should_return_correct_request_amount_after_60_seconds_have_passed
+Waiting 61 seconds...
+--- PASS: TestMainProgram (61.00s)
+--- PASS: TestMainProgram/should_return_correct_request_amount_for_each_request (0.00s)
+--- PASS: TestMainProgram/should_return_correct_request_amount_after_60_seconds_have_passed (61.00s)
+PASS
+ok      MovingWindowRequest     61.248s
+```
+
+## How much time it took me to solve this coding challenge
+
+Writing the program: approximately 10 to 16 hours split in 2 different days.
+Writing the tests: 1 hour in same day.
+
 ## Thank you!
