@@ -2,12 +2,15 @@
 
 MovingWindowService is a simple Go HTTP server that on each request responds with a
 counter of the total number of requests that it has received during the previous 60 seconds
-(moving window). The server should continue to return the correct numbers after restarting it,
+(moving window).
+
+The server should continue to return the correct numbers after restarting it,
 by persisting data to a file.
 
 ## Description
 The service is using an in memory cache to count the requests.
-There is a graceful shutdown which also write the cache to a local file
+
+There is a graceful shutdown which also writes the cache to a local file
 inside a SQLite DB.
 
 On startup the service looks if there is any recent data inside the DB which
@@ -68,10 +71,5 @@ Waiting 61 seconds...
 PASS
 ok      MovingWindowRequest     61.248s
 ```
-
-## How much time it took me to solve this coding challenge
-
-Writing the program: approximately 10 to 16 hours split in 2 different days.
-Writing the tests: 1 hour in same day.
 
 ## Thank you!
